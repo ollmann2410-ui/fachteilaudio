@@ -1,0 +1,20 @@
+THEORIEFACHTEIL – GITHUB PAGES / iPHONE PWA
+
+Dieses Paket ist für dein Repository "fachteilaudio" vorbereitet.
+
+UPLOAD (nur Browser, keine Zusatzsoftware nötig):
+1. ZIP lokal entpacken.
+2. In GitHub dein Repository "fachteilaudio" öffnen.
+3. Code -> Add file -> Upload files.
+4. Den GESAMTEN INHALT dieses Ordners hineinziehen (index.html, app.js, styles.css, sw.js, manifest.webmanifest, episodes.js, icons-Ordner und audio-Ordner).
+5. Unten "Commit changes".
+6. Settings -> Pages bleibt auf: Deploy from a branch / main / (root).
+7. Nach dem Deployment auf dem iPhone in Safari öffnen.
+8. Safari -> Teilen -> Zum Home-Bildschirm.
+9. In TheorieFachteil unten "Offline verwalten" öffnen und gewünschte Podcasts lokal speichern.
+
+WICHTIG:
+- Die Audios wurden NICHT neu komprimiert, sondern verlustfrei in 5-Minuten-Dateien aufgeteilt. Dadurch bleibt die Originalqualität erhalten.
+- Jede Upload-Datei liegt deutlich unter 25 MB.
+- Die PWA speichert Hörpositionen nur lokal auf dem jeweiligen Gerät.
+- GitHub Pages ist bei einem öffentlichen Repository öffentlich erreichbar. noindex reduziert Suchmaschinen-Auffindbarkeit, ist aber kein Zugriffsschutz.

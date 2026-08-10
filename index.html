@@ -1,1 +1,75 @@
-<h1>TheorieFachteil</h1>
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#020817">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="TheorieFachteil">
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png">
+  <link rel="icon" href="./icons/icon-192.png">
+  <link rel="stylesheet" href="./styles.css">
+  <title>TheorieFachteil</title>
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <div>
+        <h1>TheorieFachteil</h1>
+        <p>Dein Lernpodcast für die Meisterprüfung</p>
+      </div>
+      <button id="networkBadge" class="status-pill" type="button" aria-label="Offline-Verwaltung öffnen"><span class="status-dot"></span><span>ONLINE</span></button>
+    </header>
+
+    <section id="homeView" class="view">
+      <div class="category-grid">
+        <button class="category-card magic" data-category="A" type="button">
+          <span class="cat-badge">A</span>
+          <svg class="cat-art magic-art" viewBox="0 0 220 150" aria-hidden="true"><path d="M20 118 C72 58 118 48 196 30"/><path d="M28 128 C82 77 124 66 200 52"/><path d="M42 135 C96 96 135 84 196 76"/><g><circle cx="137" cy="69" r="2"/><circle cx="164" cy="55" r="2"/><circle cx="118" cy="90" r="1.6"/></g></svg>
+          <span class="card-bottom"><strong>Zauberpodcast</strong><small>Grundlagen &amp;<br>Zauberzettel</small><span class="round-arrow">→</span></span>
+        </button>
+        <button class="category-card exam" data-category="B" type="button">
+          <span class="cat-badge">B</span>
+          <svg class="cat-art exam-art" viewBox="0 0 220 150" aria-hidden="true"><path class="mount" d="M62 142 L108 72 L139 104 L164 48 L211 142 Z"/><path class="trail" d="M168 46 L168 69 L190 87 L168 105 L192 122 L176 142"/><path class="flag" d="M168 46 L168 20 L198 30 L168 40 Z"/></svg>
+          <span class="card-bottom"><strong>Prüfungspodcast</strong><small>Letzte Prüfung /<br>Prüfungsschwerpunkte</small><span class="round-arrow">→</span></span>
+        </button>
+      </div>
+      <section id="playerHome" class="player-card"></section>
+    </section>
+
+    <section id="listView" class="view hidden">
+      <div class="list-head">
+        <button id="backHome" class="icon-button" type="button" aria-label="Zurück">←</button>
+        <div><span id="listEyebrow" class="eyebrow"></span><h2 id="listTitle"></h2><p id="listSubtitle"></p></div>
+      </div>
+      <div id="episodeList" class="episode-list"></div>
+      <section id="playerList" class="player-card compact-player"></section>
+    </section>
+
+    <footer class="app-footer"><span>Offlinefähig · Fortschritt nur auf diesem Gerät</span><button id="offlineButton" type="button">Offline verwalten</button></footer>
+  </main>
+
+  <div id="offlineModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="offlineTitle">
+    <div class="modal-card">
+      <div class="modal-head"><div><span class="eyebrow">PWA &amp; OFFLINE</span><h2 id="offlineTitle">Offline speichern</h2></div><button id="closeOffline" class="icon-button" type="button">×</button></div>
+      <p class="muted">Fürs iPhone zuerst in Safari öffnen und über <b>Teilen → Zum Home-Bildschirm</b> installieren. Danach kannst du die Podcast-Dateien hier lokal sichern.</p>
+      <div id="offlineStatus" class="offline-status">Status wird geprüft …</div>
+      <div class="offline-actions">
+        <button data-offline-cat="A" class="action primary" type="button">Zauberpodcast speichern</button>
+        <button data-offline-cat="B" class="action violet" type="button">Prüfungspodcast speichern</button>
+        <button data-offline-cat="ALL" class="action" type="button">Alle 14 Folgen speichern</button>
+        <button id="clearOffline" class="action danger" type="button">Audio-Cache löschen</button>
+      </div>
+      <div id="downloadProgressWrap" class="download-wrap hidden"><div class="download-meta"><span id="downloadText">Speichere …</span><span id="downloadPct">0%</span></div><div class="progress"><div id="downloadBar"></div></div></div>
+      <p class="tiny">Hinweis: Die Audios sind groß. Für „alle Folgen“ am besten WLAN verwenden und Safari/PWA während des Downloads geöffnet lassen.</p>
+    </div>
+  </div>
+
+  <audio id="audio" preload="metadata"></audio>
+  <script src="./episodes.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
