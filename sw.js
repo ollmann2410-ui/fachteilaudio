@@ -1,4 +1,4 @@
-const SHELL_CACHE='tf-shell-v2';
+const SHELL_CACHE='tf-shell-v3';
 const AUDIO_CACHE='tf-audio-v1';
 const SHELL=['./','./index.html','./styles.css','./app.js','./episodes.js','./manifest.webmanifest','./icons/icon-192.png','./icons/icon-512.png','./icons/icon-maskable-512.png','./icons/apple-touch-icon.png'];
 

@@ -31,10 +31,22 @@
           <svg class="cat-art magic-art" viewBox="0 0 220 150" aria-hidden="true"><path d="M20 118 C72 58 118 48 196 30"/><path d="M28 128 C82 77 124 66 200 52"/><path d="M42 135 C96 96 135 84 196 76"/><g><circle cx="137" cy="69" r="2"/><circle cx="164" cy="55" r="2"/><circle cx="118" cy="90" r="1.6"/></g></svg>
           <span class="card-bottom"><strong>Zauberpodcast</strong><small>Grundlagen &amp;<br>Zauberzettel</small><span class="round-arrow">→</span></span>
         </button>
+
         <button class="category-card exam" data-category="B" type="button">
           <span class="cat-badge">B</span>
           <svg class="cat-art exam-art" viewBox="0 0 220 150" aria-hidden="true"><path class="mount" d="M62 142 L108 72 L139 104 L164 48 L211 142 Z"/><path class="trail" d="M168 46 L168 69 L190 87 L168 105 L192 122 L176 142"/><path class="flag" d="M168 46 L168 20 L198 30 L168 40 Z"/></svg>
           <span class="card-bottom"><strong>Prüfungspodcast</strong><small>Letzte Prüfung /<br>Prüfungsschwerpunkte</small><span class="round-arrow">→</span></span>
+        </button>
+
+        <button class="category-card style" data-category="C" type="button">
+          <span class="cat-badge">C</span>
+          <svg class="cat-art style-art" viewBox="0 0 220 150" aria-hidden="true">
+            <path class="style-arch" d="M38 138 V72 C38 31 72 16 110 16 C148 16 182 31 182 72 V138"/>
+            <path d="M57 138 V76 C57 48 80 35 110 35 C140 35 163 48 163 76 V138"/>
+            <path d="M82 138 V66 H138 V138"/>
+            <path d="M72 138 H148 M76 126 H144 M82 57 H138"/>
+          </svg>
+          <span class="card-bottom"><strong>Stilkunde</strong><small>Architektur · Epochen<br>&amp; Gestaltung</small><span class="round-arrow">→</span></span>
         </button>
       </div>
       <section id="playerHome" class="player-card"></section>
@@ -49,22 +61,23 @@
       <section id="playerList" class="player-card compact-player"></section>
     </section>
 
-    <footer class="app-footer"><span>Offlinefähig · Fortschritt nur auf diesem Gerät</span><button id="offlineButton" type="button">Offline verwalten</button></footer>
+    <footer class="app-footer"><span>PWA · Fortschritt nur auf diesem Gerät</span><button id="offlineButton" type="button">Offline verwalten</button></footer>
   </main>
 
   <div id="offlineModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="offlineTitle">
     <div class="modal-card">
       <div class="modal-head"><div><span class="eyebrow">PWA &amp; OFFLINE</span><h2 id="offlineTitle">Offline speichern</h2></div><button id="closeOffline" class="icon-button" type="button">×</button></div>
-      <p class="muted">Fürs iPhone zuerst in Safari öffnen und über <b>Teilen → Zum Home-Bildschirm</b> installieren. Danach kannst du die Podcast-Dateien hier lokal sichern.</p>
-      <div id="offlineStatus" class="offline-status">Status wird geprüft …</div>
+      <p class="muted">Die App selbst ist als PWA installierbar. Die Audio-Offline-Funktion für die neuen Release-Dateien testen wir separat.</p>
+      <div id="offlineStatus" class="offline-status">Online-Wiedergabe ist aktiv.</div>
       <div class="offline-actions">
         <button data-offline-cat="A" class="action primary" type="button">Zauberpodcast speichern</button>
         <button data-offline-cat="B" class="action violet" type="button">Prüfungspodcast speichern</button>
-        <button data-offline-cat="ALL" class="action" type="button">Alle 14 Folgen speichern</button>
+        <button data-offline-cat="C" class="action gold" type="button">Stilkunde speichern</button>
+        <button data-offline-cat="ALL" class="action" type="button">Alle 17 Folgen speichern</button>
         <button id="clearOffline" class="action danger" type="button">Audio-Cache löschen</button>
       </div>
       <div id="downloadProgressWrap" class="download-wrap hidden"><div class="download-meta"><span id="downloadText">Speichere …</span><span id="downloadPct">0%</span></div><div class="progress"><div id="downloadBar"></div></div></div>
-      <p class="tiny">Hinweis: Die Audios sind groß. Für „alle Folgen“ am besten WLAN verwenden und Safari/PWA während des Downloads geöffnet lassen.</p>
+      <p class="tiny">Hinweis: Die Audios sind groß. Für „alle Folgen“ am besten WLAN verwenden und die PWA während des Downloads geöffnet lassen.</p>
     </div>
   </div>
 
