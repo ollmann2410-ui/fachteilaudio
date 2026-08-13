@@ -67,8 +67,8 @@
   <div id="offlineModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="offlineTitle">
     <div class="modal-card">
       <div class="modal-head"><div><span class="eyebrow">PWA &amp; OFFLINE</span><h2 id="offlineTitle">Offline speichern</h2></div><button id="closeOffline" class="icon-button" type="button">×</button></div>
-      <p class="muted">Die App selbst ist als PWA installierbar. Die Audio-Offline-Funktion für die neuen Release-Dateien testen wir separat.</p>
-      <div id="offlineStatus" class="offline-status">Online-Wiedergabe ist aktiv.</div>
+      <p class="muted">Folgen können vollständig auf diesem Gerät gespeichert werden. Gespeicherte Folgen werden bevorzugt lokal abgespielt und funktionieren auch ohne Internet.</p>
+      <div id="offlineStatus" class="offline-status">0 von 17 Folgen lokal gespeichert.</div>
       <div class="offline-actions">
         <button data-offline-cat="A" class="action primary" type="button">Zauberpodcast speichern</button>
         <button data-offline-cat="B" class="action violet" type="button">Prüfungspodcast speichern</button>
@@ -77,7 +77,7 @@
         <button id="clearOffline" class="action danger" type="button">Audio-Cache löschen</button>
       </div>
       <div id="downloadProgressWrap" class="download-wrap hidden"><div class="download-meta"><span id="downloadText">Speichere …</span><span id="downloadPct">0%</span></div><div class="progress"><div id="downloadBar"></div></div></div>
-      <p class="tiny">Hinweis: Die Audios sind groß. Für „alle Folgen“ am besten WLAN verwenden und die PWA während des Downloads geöffnet lassen.</p>
+      <p class="tiny">Hinweis: Die Audios sind groß. Für „alle Folgen“ am besten WLAN verwenden und die installierte PWA während des Downloads geöffnet lassen. Downloads gelten nur für dieses Gerät.</p>
     </div>
   </div>
 
